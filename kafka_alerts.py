@@ -42,9 +42,9 @@ alerts_df = (spark.read.csv("./data/alerts_conditions.csv", header=True)
              .withColumn("min_humidity", col("min_humidity").cast(IntegerType()))
              .withColumn("max_humidity", col("max_humidity").cast(IntegerType())))
 
-# Параметри вікна для обчислень за часом
-window_duration = "1 minute"  # Тривалість вікна
-sliding_interval = "30 seconds"  # Інтервал зміщення вікна
+# Встановлення значень для вікна тривалості та ковзного інтервалу для обчислення алертів
+window_duration = "1 minute"  
+sliding_interval = "30 seconds" 
 
 # Підключення до Kafka та читання потоку даних з топіку
 df = (
@@ -170,5 +170,6 @@ stream_to_kafka = (
 
 # Очікування завершення потоків
 stream_to_console.awaitTermination()
+
 
 
