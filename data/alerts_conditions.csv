@@ -1,1 +1,15 @@
-
+code,min_temperature,max_temperature,min_humidity,max_humidity,message
+100,-999,10,-999,-999,It's too cold
+101,10,15,-999,-999,It's cold
+102,15,25,-999,-999,It's comfortable
+103,25,30,-999,-999,It's warm
+104,30,-999,-999,-999,It's too hot
+200,-999,-999,-999,30,Too dry
+201,-999,-999,30,40,Dry
+202,-999,-999,40,60,Normal humidity
+203,-999,-999,60,70,Humid
+204,-999,-999,70,-999,Too humid
+300,30,-999,70,-999,Hot and humid
+301,-999,10,-999,30,Cold and dry
+302,25,30,60,70,Warm and humid
+303,15,25,40,60,Ideal conditions
